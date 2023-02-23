@@ -1,0 +1,455 @@
+
+
+
+@import 'config';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Clash Display', sans-serif;
+    overflow: hidden;
+
+
+
+    .container{
+        margin: 2rem;
+
+
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2rem 0;
+
+            .logo{
+                font-size: 1.5rem;
+            }
+
+
+            .nav-list{
+                display: flex;
+                gap: 1rem;
+                
+                li{
+                    list-style-type: none;
+                    font-size: 1rem;
+                    position: relative;
+                    font-weight: 400;
+
+                    a{
+                        text-decoration: none;
+                        color: black;
+
+                        &::after{
+                            content: '';
+                            background-color: #000;
+                            position: absolute;
+                            height: 3px;
+                            width: 0%;
+                            display: block;
+                            transition: .3s all ease-in;
+                        }
+
+                        &:hover::after{
+                            content: '';
+                            height: 3px;
+                            width: 5rem;
+                            display: block;
+                        }
+                    }
+                    
+
+                }
+            }
+
+            .menu{
+                font-size: 1.5rem;
+            }
+        }
+
+
+        .hero-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // align-items: center;
+
+
+            
+
+            
+
+            &-text{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+
+                .main-text{
+                    h1{
+                        font-size: 10rem;
+                        text-align: center;
+                    }
+                }
+                // .text1{
+                //     display: inline-block;
+                //     flex-direction: column;
+                // }
+            }
+
+
+            &-image{
+
+                margin: 0 auto;
+                height: 700px;
+                width: 1300px;
+                padding: 2rem;
+                img{
+                    height: 700px;
+                    width: 1200px;
+                    object-fit: cover;
+                }
+            }
+
+
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    body{
+        .container{
+            // .nav{
+
+            // }
+
+            .hero-container{
+
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 6rem;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                &-image{
+                    height: 700px;
+                    width: 1000px;
+                    padding: 2rem;
+                    img{
+                        height: 700px;
+                        width: 900px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px){
+    body{
+        .container{
+
+            .hero-container{
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 5rem;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                &-image{
+                    height: 700px;
+                    width: 900px;
+                    padding: 2rem;
+                    img{
+                        height: 700px;
+                        width: 800px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media only screen and (max-width: 800px){
+    body{
+        .container{
+
+            .hero-container{
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 4.5rem;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                &-image{
+                    height: 700px;
+                    width: 800px;
+                    padding: 2rem;
+                    img{
+                        height: 700px;
+                        width: 720px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    body{
+        .container{
+
+
+            .nav{
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;
+                // margin: 2rem 0;
+    
+                .logo{
+                    font-size: 2rem;
+                }
+    
+    
+                .nav-list{
+                    display: none;
+                    gap: 1rem;
+                    
+                }
+    
+                .menu{
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+
+            .hero-container{
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 4rem;
+                            text-align: center;
+                        }
+                    }
+
+
+
+                    .text1{
+                        display:none;
+                    }
+                }
+
+                &-image{
+                    height: 600px;
+                    width: 700px;
+                    padding: 2rem;
+                    img{
+                        height: 600px;
+                        width: 620px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media only screen and (max-width: 610px){
+    body{
+        .container{
+
+
+            .nav{
+
+    
+                .logo{
+                    font-size: 1.5rem;
+                }
+    
+                .menu{
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+
+            .hero-container{
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 4rem;
+                            text-align: center;
+                        }
+                    }
+
+                    .text1{
+                        display:none;
+                    }
+                }
+
+                &-image{
+                    height: 500px;
+                    width: 600px;
+                    padding: 2rem;
+                    img{
+                        height: 500px;
+                        width: 520px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media only screen and (max-width: 425px){
+    body{
+        .container{
+
+
+            .nav{
+
+    
+                .logo{
+                    font-size: 1.5rem;
+                }
+    
+                .menu{
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+
+            .hero-container{
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 2rem;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                &-image{
+                    height: 500px;
+                    width: 450px;
+                    padding: 2rem;
+                    img{
+                        height: 500px;
+                        width: 400px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media only screen and (max-width: 350px){
+    body{
+        .container{
+            .nav{
+                .logo{
+                    font-size: 1.5rem;
+                }
+    
+                .menu{
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+
+            .hero-container{
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 1rem;
+                            text-align: center;
+                        }
+                    }
+
+                }
+
+                &-image{
+                    margin: 0 auto;
+                    height: 400px;
+                    width: 250px;
+                    padding: 2rem;
+                    img{
+                        height: 400px;
+                        width: 250px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media only screen and (max-width: 510px){
+    body{
+        .container{
+            .nav{
+                .logo{
+                    font-size: 1.5rem;
+                }
+    
+                .menu{
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+
+            .hero-container{
+
+                &-text{
+                    .main-text{
+                        h1{
+                            font-size: 2.5rem;
+                            text-align: center;
+                        }
+                    }
+
+                }
+
+                &-image{
+                    margin: 0 auto;
+                    height: 400px;
+                    width: 300px;
+                    padding: 2rem;
+                    img{
+                        height: 400px;
+                        width: 300px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+    }
+}
