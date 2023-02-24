@@ -9,11 +9,25 @@
     box-sizing: border-box;
 }
 
+
+.green{
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 4rem;
+        width: 15rem;
+        margin: 0;
+        overflow: hidden;
+        background-color: green;
+        display: block;
+      
+}
 body{
     height: 100vh;
     font-family: 'Archivo', sans-serif;
     font-family: 'Clash Display', sans-serif;
-    overflow: hidden;
+    overflow: hidden; 
 
 
 
